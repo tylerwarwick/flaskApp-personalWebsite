@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyler Warwick</title>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@ Icons @@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- @@@@@@@@@@@@@@@@@@@@ CSS @@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+
+    <!-- @@@@@@@@@@@@@@@@@@@@ Swiper CSS @@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swiper-bundle.min.css')}}">
+
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+    <!-- @@@@@@@@@@@@@@@@@@@@ Header @@@@@@@@@@@@@@@@@@@@ -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Tyler</a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#experience" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Experience
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact Me
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+                <div class="nav__btns">
+                    <!-- Theme Change Button -->
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+        </nav>
+    </header>
+
+    <div class="container">
+    {% block content %}
+    {% endblock %}
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@ Footer @@@@@@@@@@@@@@@@@@@@ -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Tyler Warwick</h1>
+                    <span class="footer__subtitle">Systems Engineering Student</span>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#skills" class="footer__link">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#experience" class="footer__link">Experience</a>
+                    </li>
+
+                    <li>
+                        <a href="#portfolio" class="footer__link">Projects</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.instagram.com/tylerwarwick_/" target="_blank" class="footer__social">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@ Scroll Top @@@@@@@@@@@@@@@@@@@@ -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@ JS @@@@@@@@@@@@@@@@@@@@ -->
+    <script 
+        type="text/javascript"
+        src="{{ url_for('static', filename='js/main.js') }}"
+        ></script>
+
+</body>
+</html>
